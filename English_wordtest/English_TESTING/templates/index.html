@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>혜리미의 퀴즈나라</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<h2>이름을 입력하세요!</h2>
+<form action='{% url "test" 1 %}' method="get">
+    <label for ="name">이름: </label><input id="name" type="text" name="name"/>
+    <input type="submit" value="등록">
+</form>
+</body>
+</html>

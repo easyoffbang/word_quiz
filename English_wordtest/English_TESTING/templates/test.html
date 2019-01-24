@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>혜리미의 퀴즈나라</title>
+</head>
+<body>
+<form action="{{ next_url }}" method="get">
+    <h1> 단어 시험지 </h1>
+    <h2> 당신의 이름 : {{ name }}</h2>
+    <h2>{{ step }}번째 문제</h2>
+    <h2>뜻 : {{ meaning }}</h2>
+
+    <h2><label for ='answer'>정답:</label></h2>
+    <input type="text" id='answer' name="answer">
+    <button type="submit">제출하기</button>
+
+
+    <input type="hidden" name="name" value="{{ name }}"/>
+    <input type="hidden" name="answer_list" value="{{ answer_list }}"/>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>혜리미의 퀴즈나라</title>
+</head>
+<body>
+<h1> {{ name }}님의 퀴즈 결과 </h1>
+{% for cor_word, user_answer in check_answer_list.items %}
+    <h2>{{ forloop.counter }}번 문제</h2>
+    <h3>정답: {{ cor_word }}</h3>
+    <h3>입력한 답: {{ user_answer }}</h3>
+    {% if cor_word == user_answer %}
+        <h3>정답입니다!</h3>
+    {% else %}
+        <h3>오답입니다.</h3>
+    {% endif %}
+{% endfor %}
+
+<a href="{% url 'index' %}">처음으로 가기</a>
+</body>
+</html>
